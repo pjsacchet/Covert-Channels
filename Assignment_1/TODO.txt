@@ -1,0 +1,9 @@
+1) Make it so we pass sender IP to receiver functionality so we only parse packets from the anticipated sender
+2) Fix firewall so it doesn't modidy packet header but we do change who its from so it sends
+# Try to manually change the sender ip ourselves
+        # Change source ip
+        #print(str(pkt[15])) # this is the last octet
+        #print(str(pkt[20:22])) # this is the source port
+        #pkt[15] = b'\x84' # this is 132 (last octet of firewall)
+        #pkt[20:22] = b'\x07\x83' # this is 1923 (source port of sending for firewall)
+        # Change source port
